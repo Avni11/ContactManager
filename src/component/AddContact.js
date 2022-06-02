@@ -10,8 +10,8 @@ class AddContact extends React.Component {
 
   add = (e) => {
     e.preventDefault();
-    if (this.state.name === "" || this.state.phonenumber === "") {
-      alert("ALl the fields are mandatory!");
+    if (this.state.firstname === "" || this.state.phonenumber === "") {
+      alert("Make Sure you Enter name and phone number");
       return;
     }
     this.props.addContactHandler(this.state);
@@ -22,6 +22,7 @@ class AddContact extends React.Component {
       address: "",
       lastname: "",
     });
+    this.props.history.push("/");
   };
   render() {
     return (
